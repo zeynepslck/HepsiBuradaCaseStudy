@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "e88b0a66-f2d1-42b4-a617-0b97ca711d8a",
+		"name": "HepsiBurada",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get-Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.hepsiburada.com/siparislerim",
+					"protocol": "https",
+					"host": [
+						"www",
+						"hepsiburada",
+						"com"
+					],
+					"path": [
+						"siparislerim"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post-Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://www.hepsiburada.com/siparislerim",
+					"protocol": "https",
+					"host": [
+						"www",
+						"hepsiburada",
+						"com"
+					],
+					"path": [
+						"siparislerim"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
