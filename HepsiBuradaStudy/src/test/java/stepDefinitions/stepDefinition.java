@@ -15,7 +15,7 @@ public class stepDefinition {
 	public void setUp(){
 		//options = new ChromeOptions();
 		//options.addArguments("user-agent=Mozilla/5.0 (WghrXkuMnF) AppleWebKit/5.0 Chrome/8.0 Safari/5.0");	
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Zeynep Sel�ok\\eclipse-workspace\\HepsiBuradaStudy\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Zeynep Selçok\\eclipse-workspace\\HepsiBuradaStudy\\chromedriver.exe");
 	}
 	
 	@Given("^User is on \"https://www.hepsiburada.com/\"$")
@@ -36,18 +36,14 @@ public class stepDefinition {
 
 	@And("^User select a product$")
 	public void select_product() {
-		List<WebElement> elements = driver.findElements(By.className("productListContent-item"));	
-		java.util.Iterator<WebElement> i = elements.iterator();
+		List<WebElement> elements = driver.findElements(By.className("productListContent-item"));
+		java.util.Iterator<WebElement> i = elements.iterator();//öğeleri tarar
 		
-		while(i.hasNext()) {
-		    WebElement element = i.next();
-	    	
+	    WebElement element = i.next();
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		    if (element.isDisplayed()) {
-				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		    	elements.get(0).click();
 		    }
-			break;
-		}
 	}
 	
 	@And("^User click \"Degerlendirmeler\" tab$")
